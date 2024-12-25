@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+
+    background-color: #f9f9f9;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../images/horo/3.jpg') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 1200px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    margin: 30px 30px;
+}
+
+.hero-title {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 0 10px yellow;
+}
+
+.hero-subtitle, .sub-hero-title {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #f3f3f3;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.hero-description, .sub-hero-text {
+    margin-bottom: 25px;
+    color: white;
+
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.sub-hero-text {
+    color: grey;
+}
+.cta-button {
+    padding: 18px 36px;
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgb(255, 255, 255, 1);
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #e64a19;
+    transform: scale(1.1);
+}
+
+.sub-hero {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: left;
+}
+
+.sub-hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.sub-hero-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.features-list {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.features-list li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.features-list li::before {
+    content: '✔️';
+    margin-right: 10px;
+    color: #4caf50;
+}

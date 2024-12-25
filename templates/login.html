@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="../static/styles/homepage_header.css">
+    <link rel="stylesheet" href="../static/styles/homepage_footer.css">
+    <link rel="stylesheet" href="../static/styles/login.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo"></div>
+            <div class="search">
+                <input 
+                    type="text" 
+                    id="search-bar" 
+                    class="input-bar" 
+                    placeholder="Search here..."
+                >
+                <button class="search-but">Search</button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <h1>Login</h1>
+            <div class="auth-forms">
+                <form 
+                    id="login-form" 
+                    action="/login" 
+                    method="POST">
+                    <h2>Login</h2>
+                    <label for="login-email">Email:</label>
+                    <input 
+                        type="email" 
+                        id="login-email" 
+                        name="email" 
+                        placeholder="Enter your email" 
+                        required>
+                    <label for="login-password">Password:</label>
+                    <input 
+                        type="password" 
+                        id="login-password" 
+                        name="password" 
+                        placeholder="Enter your password" 
+                        required>
+                    <button 
+                        type="submit" 
+                        class="submit-button">Login</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img 
+                    src="{{ url_for('static', filename='images/logo_transparent.png') }}" 
+                    alt="Logo">
+                <p>Your trusted e-commerce platform.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <a 
+                    href="https://facebook.com" 
+                    target="_blank" 
+                    aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a 
+                    href="https://twitter.com" 
+                    target="_blank" 
+                    aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a 
+                    href="https://instagram.com" 
+                    target="_blank" 
+                    aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a 
+                    href="https://linkedin.com" 
+                    target="_blank" 
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 My E-Commerce Site. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

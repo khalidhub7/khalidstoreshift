@@ -1,0 +1,88 @@
+.
+├── README.md
+├── __pycache__
+│   └── app.cpython-38.pyc
+├── app.py
+├── data
+│   └── db
+│       ├── WiredTiger
+│       ├── WiredTiger.lock
+│       ├── WiredTiger.turtle
+│       ├── WiredTiger.wt
+│       ├── WiredTigerLAS.wt
+│       ├── _mdb_catalog.wt
+│       ├── collection-0--86953724238772613.wt
+│       ├── collection-0-971852140511128492.wt
+│       ├── collection-2--86953724238772613.wt
+│       ├── collection-2-971852140511128492.wt
+│       ├── collection-4--86953724238772613.wt
+│       ├── collection-4-971852140511128492.wt
+│       ├── collection-6-971852140511128492.wt
+│       ├── diagnostic.data [error opening dir]
+│       ├── index-1--86953724238772613.wt
+│       ├── index-1-971852140511128492.wt
+│       ├── index-3--86953724238772613.wt
+│       ├── index-3-971852140511128492.wt
+│       ├── index-5--86953724238772613.wt
+│       ├── index-5-971852140511128492.wt
+│       ├── index-6--86953724238772613.wt
+│       ├── index-7-971852140511128492.wt
+│       ├── journal [error opening dir]
+│       ├── mongod.lock
+│       ├── sizeStorer.wt
+│       └── storage.bson
+├── example.py
+├── requirements.txt
+├── routes
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-38.pyc
+│   │   ├── cart.cpython-38.pyc
+│   │   ├── checkout.cpython-38.pyc
+│   │   ├── db.cpython-38.pyc
+│   │   ├── history.cpython-38.pyc
+│   │   ├── login.cpython-38.pyc
+│   │   ├── orders.cpython-38.pyc
+│   │   ├── products.cpython-38.pyc
+│   │   └── register.cpython-38.pyc
+│   ├── cart.py
+│   ├── checkout.py
+│   ├── db.py
+│   ├── login.py
+│   ├── orders.py
+│   ├── products.py
+│   └── register.py
+├── setup.py
+├── static
+│   ├── images
+│   │   ├── camera-product.jpg
+│   │   ├── headphones-product.jpg
+│   │   ├── horo
+│   │   │   └── 3.jpg
+│   │   ├── laptop-product.jpg
+│   │   ├── logo_transparent.png
+│   │   ├── smartphone-product.jpg
+│   │   ├── smartwatch-product.jpg
+│   │   └── tablet-product.jpg
+│   └── styles
+│       ├── cartpage.css
+│       ├── checkout.css
+│       ├── homepage_body.css
+│       ├── homepage_footer.css
+│       ├── homepage_header.css
+│       ├── landing.css
+│       ├── landing_header.css
+│       ├── login.css
+│       ├── orders.css
+│       └── register.css
+├── structure.txt
+└── templates
+    ├── cart.html
+    ├── checkout.html
+    ├── landing.html
+    ├── login.html
+    ├── orders.html
+    ├── products.html
+    └── register.html
+
+12 directories, 73 files

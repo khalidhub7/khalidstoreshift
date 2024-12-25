@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>orders history</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/homepage_header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/homepage_footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/orders.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo"></div>
+            <div class="search">
+                <input 
+                    type="text" 
+                    id="search-bar" 
+                    class="input-bar" 
+                    placeholder="Search here..."
+                >
+                <button class="search-but">Search</button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="order-history">
+            <h1>All Orders</h1>
+            {% if orders %}
+                <ul class="order-list">
+                    {% for order in orders %}
+                        <li class="order-item">
+                            <h2>Order #{{ order._id }}</h2>
+                            <p><strong>User ID:</strong> {{ order.user_id }}</p>
+                            <p><strong>Date:</strong> {{ order.order_date }}</p>
+                            <p><strong>Total:</strong> ${{ order.total_price }}</p>
+                            <p><strong>Status:</strong> {{ order.status }}</p>
+                            <h3>Products:</h3>
+                            <ul>
+                                {% for product in order.products %}
+                                    <li>
+                                        <strong>Product ID:</strong> {{ product.product_id }}<br>
+                                        <strong>Quantity:</strong> {{ product.quantity }}<br>
+                                        <strong>Price:</strong> ${{ product.price }}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No orders found.</p>
+            {% endif %}
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img 
+                    src="{{ url_for('static', filename='images/logo_transparent.png') }}" 
+                    alt="Logo">
+                <p>Your trusted e-commerce platform.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <a 
+                    href="https://facebook.com" 
+                    target="_blank" 
+                    aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a 
+                    href="https://twitter.com" 
+                    target="_blank" 
+                    aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a 
+                    href="https://instagram.com" 
+                    target="_blank" 
+                    aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a 
+                    href="https://linkedin.com" 
+                    target="_blank" 
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 My E-Commerce Site. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

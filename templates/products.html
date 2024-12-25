@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product listing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/homepage_header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/homepage_body.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/homepage_footer.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo"></div>
+            <div class="search">
+                <input 
+                    type="text" 
+                    id="search-bar" 
+                    class="input-bar" 
+                    placeholder="Search here..."
+                >
+                <button class="search-but">Search</button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1 class="product-header">Our Products</h1>
+        <div class="product-grid">
+            {% for product in products %}
+                <div class="product">
+                    <div class="product-image-container">
+                        <img 
+                            src="{{ url_for('static', filename=product.image_url) }}" 
+                            alt="{{ product.name }}"
+                        >
+                    </div>
+                    <div class="product-details">
+                        <h2>{{ product.name }}</h2>
+                        <p>{{ product.description }}</p>
+                        <p class="product-price">Price: ${{ product.price }}</p>
+                        <form action="/cart/add" method="POST">
+                            <input type="hidden" name="product_id" value="{{ product._id }}">
+                            <button type="submit" class="add-to-cart">Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img 
+                    src="{{ url_for('static', filename='images/logo_transparent.png') }}" 
+                    alt="Logo">
+                <p>Your trusted e-commerce platform.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <a 
+                    href="https://facebook.com" 
+                    target="_blank" 
+                    aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a 
+                    href="https://twitter.com" 
+                    target="_blank" 
+                    aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a 
+                    href="https://instagram.com" 
+                    target="_blank" 
+                    aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a 
+                    href="https://linkedin.com" 
+                    target="_blank" 
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 My E-Commerce Site. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
