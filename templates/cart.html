@@ -50,7 +50,7 @@
                     <tr>
                         <td class="product-name">{{ item.product_id }}</td>
                         <td>
-                            <form action="/cart/update" method="POST">
+                            <form action="/khalid_store_shift/cart/update" method="POST">
                                 <input 
                                     type="hidden" 
                                     name="product_id" 
@@ -69,7 +69,7 @@
                         <td>${{ item.price }}</td>
                         <td>${{ item.price * item.quantity }}</td>
                         <td>
-                            <form action="/cart/remove" method="POST">
+                            <form action="/khalid_store_shift/cart/remove" method="POST">
                                 <input 
                                     type="hidden" 
                                     name="product_id" 
@@ -84,7 +84,7 @@
             </table>
             <div class="cart-summary">
                 <p>Total Price: <span class="total-price">${{ cart.total_price }}</span></p>
-                <form action="/checkout" method="GET">
+                <form action="/khalid_store_shift/checkout" method="GET">
                     <button class="checkout-button" type="submit">Proceed to Checkout</button>
                 </form>
             </div>

@@ -47,7 +47,7 @@
                         <h2>{{ product.name }}</h2>
                         <p>{{ product.description }}</p>
                         <p class="product-price">Price: ${{ product.price }}</p>
-                        <form action="/cart/add" method="POST">
+                        <form action="/khalid_store_shift/cart/add" method="POST">
                             <input type="hidden" name="product_id" value="{{ product._id }}">
                             <button type="submit" class="add-to-cart">Add to Cart</button>
                         </form>

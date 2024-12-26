@@ -16,19 +16,19 @@ def add_to_cart():
     mongo = app.config["MONGO"]
     user_id = session.get("user_id")
     if not user_id:
-        return redirect("/login")
+        return redirect(url_for("app_views.products"))
     product_id = request.form.get("product_id")
     if not product_id:
-        return redirect("/products")
+        return redirect(url_for("app_views.products"))
     try:
         product = mongo.db.products.find_one(
             {"_id": ObjectId(product_id)})
     except Exception as e:
-        return redirect("/products")
+        return redirect(url_for("app_views.products"))
     if not product:
-        return redirect("/products")
+        return redirect(url_for("app_views.products"))
     db.addtocart(mongo, user_id, product)
-    return redirect("/products")
+    return redirect(url_for("app_views.products"))
 
 
 @app_views.route("/cart")
@@ -107,4 +107,4 @@ stock available.")
         cart["updated_at"] = datetime.datetime.utcnow()
         mongo.db.cart.update_one(
             {"_id": cart["_id"]}, {"$set": cart})
-    return redirect("/cart")
+    return redirect(url_for("app_views.cart"))
