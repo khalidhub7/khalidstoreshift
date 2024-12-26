@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ user login logout """
 from flask import (request, session, redirect,
-                   url_for, render_template, abort)
+                   url_for, abort, render_template)
 from . import app_views
 from . import db
 
@@ -22,7 +22,8 @@ def login():
 
         abort(400, description="Invalid \
 credentials! Please try again. 🔑")
-    return render_template("login.html")
+    return render_template('/login.html')
+
 
 
 @app_views.route("/logout", methods=["GET"],
