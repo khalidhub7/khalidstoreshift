@@ -39,7 +39,7 @@ def display_orders():
 
                 result = mongo.db.orders.insert_one(order)
                 order["_id"] = str(result.inserted_id)
-                mongo.db.cart.delete_one({"_id": cart["_id"]})
+                # mongo.db.cart.delete_one({"_id": cart["_id"]})
                 all_orders.append(order)
 
         if not all_orders:

@@ -1,12 +1,3 @@
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
 main {
     flex: 1;
     padding: 60px 20px;
@@ -16,10 +7,8 @@ main {
 }
 
 .checkout-page {
-    background-color: rgba(255, 255, 255, 0.9);
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     max-width: 700px;
     width: 100%;
     backdrop-filter: blur(10px);
@@ -44,7 +33,7 @@ main {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #0056b3;
+    color: black;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -70,7 +59,7 @@ main {
     padding: 12px;
     font-size: 14px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid gray;
     color: #555;
 }
 
@@ -85,7 +74,7 @@ main {
 .checkout-form {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 10px;
 }
 
 .form-group {
@@ -97,7 +86,8 @@ main {
 .form-group label {
     font-size: 15px;
     font-weight: bold;
-    color: #444;
+    color: black;
+    font-family: monospace;   
 }
 
 .form-group input,
@@ -124,29 +114,19 @@ main {
     font-size: 17px;
     font-weight: bold;
     color: white;
-    background: rgba(40, 167, 69, 0.85);
+    background: linear-gradient(90deg, #ff6f00, #ff9800);
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(8px);
+
+    width: 30%;
 }
 
 .confirm-order:hover {
-    background: rgba(33, 136, 56, 0.9);
+    background: linear-gradient(90deg, #ff6f00, #ff9800);
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    font-size: 14px;
-    letter-spacing: 0.5px;
 }

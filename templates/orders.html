@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>orders history</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/homepage_header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/landing_header.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/homepage_footer.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/orders.css') }}">
 </head>
@@ -12,25 +12,17 @@
     <header>
         <div class="header-left">
             <div class="logo"></div>
-            <div class="search">
-                <input 
-                    type="text" 
-                    id="search-bar" 
-                    class="input-bar" 
-                    placeholder="Search here..."
-                >
-                <button class="search-but">Search</button>
-            </div>
+            <div class="titlee">khalidStoreshift</div>
         </div>
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/products">Shop</a></li>
+                <li><a href="/khalid_store_shift">Home</a></li>
+                <li><a href="/khalid_store_shift/products">Shop</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </header> 
 
     <main>
         <section class="order-history">
