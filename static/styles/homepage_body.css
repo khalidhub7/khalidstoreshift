@@ -5,13 +5,20 @@ body {
     background-color: #f9f9f9;
 }
 
-.product-header {
-    text-align: left;
+/* Container for header and cart icon */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-left: 30px;
+    padding: 20px 0;
+}
+
+.product-header {
     font-size: 24px;
     font-weight: bold;
-    padding: 20px 0;
     color: #333;
+    margin: 0;
 }
 
 .product-grid {
@@ -94,22 +101,64 @@ body {
     margin: 10px 0;
 }
 
+/* Enhanced Add to Cart Button Styling */
 .add-to-cart {
-    padding: 12px 18px;
-    background-color: rgba(220, 53, 69, 0.8);
+    padding: 16px 30px;
+    background: linear-gradient(145deg, #ff4e50, #ff6a71);
     color: white;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 700;
     border: none;
-    border-radius: 8px;
+    border-radius: 15px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, filter 0.2s ease;
-    margin-top: 15px;
-    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    margin-right: 20px; /* Margin right */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
 .add-to-cart:hover {
-    background-color: rgba(220, 53, 69, 1);
-    transform: scale(1.05);
-    filter: brightness(1.2);
+    background: linear-gradient(145deg, #ff6a71, #ff4e50);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.add-to-cart:active {
+    background: linear-gradient(145deg, #ff4e50, #ff6a71);
+    transform: translateY(2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.add-to-cart:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #ff6a71;
+}
+
+/* Cart Icon Styling - Placed in the Header */
+.cart-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 20px; /* Margin right for spacing */
+}
+
+.cart-icon-link:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.cart-icon {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
 }

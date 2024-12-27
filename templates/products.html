@@ -33,7 +33,16 @@
     </header>
     
     <main>
-        <h1 class="product-header">Our Products</h1>
+        <!-- Container for the header and cart icon -->
+        <div class="header-container">
+            <h1 class="product-header">Our Products</h1>
+    
+            <!-- Cart Icon Link -->
+            <a href="/khalid_store_shift/cart" class="cart-icon-link">
+                <img src="{{ url_for('static', filename='images/shopping-cart.png') }}" alt="Cart" class="cart-icon">
+            </a>
+        </div>
+    
         <div class="product-grid">
             {% for product in products %}
                 <div class="product">
@@ -56,6 +65,9 @@
             {% endfor %}
         </div>
     </main>
+    
+    
+    
     
     <footer class="footer">
         <div class="footer-content">
@@ -108,3 +120,4 @@
     </footer>
 </body>
 </html>
+

@@ -70,7 +70,7 @@ def remove_from_cart():
         else:
             mongo.db.cart.update_one(
                 {"_id": cart["_id"]}, {"$set": cart})
-    return redirect("/cart")
+    return redirect(url_for("app_views.cart"))
 
 
 @app_views.route("/cart/update", methods=["POST"],
