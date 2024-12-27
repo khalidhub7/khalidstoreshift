@@ -4,6 +4,7 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
 
 main {
@@ -12,27 +13,27 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f4f4f4;
 }
 
 .checkout-page {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     max-width: 700px;
     width: 100%;
+    backdrop-filter: blur(10px);
 }
 
 .checkout-page h1 {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 25px;
     color: #333;
-    border-bottom: 3px solid #0056b3;
-    display: inline-block;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     padding-bottom: 10px;
+    border-bottom: none;
 }
 
 .order-summary {
@@ -40,10 +41,11 @@ main {
 }
 
 .order-summary h2 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #333;
+    color: #0056b3;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .order-summary-table {
@@ -51,24 +53,29 @@ main {
     border-collapse: separate;
     border-spacing: 0;
     margin-bottom: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .order-summary-table th {
-    background-color: #0056b3;
-    color: white;
+    background: linear-gradient(90deg, #0056b3, #007bff);
+    color: #fff;
     text-align: left;
-    padding: 15px;
-    font-size: 16px;
+    padding: 12px;
+    font-size: 15px;
 }
 
 .order-summary-table td {
-    padding: 15px;
+    padding: 12px;
     font-size: 14px;
     text-align: center;
     border-bottom: 1px solid #ddd;
+    color: #555;
+}
+
+.order-summary-table tr:nth-child(even) td {
+    background-color: #f7f9fc;
 }
 
 .order-summary-table tr:last-child td {
@@ -78,17 +85,17 @@ main {
 .checkout-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 }
 
 .form-group label {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     color: #444;
 }
@@ -97,10 +104,11 @@ main {
 .form-group textarea,
 .form-group select {
     padding: 12px;
-    font-size: 16px;
+    font-size: 15px;
     border: 1px solid #ddd;
-    border-radius: 6px;
-    transition: border-color 0.3s ease;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group input:focus,
@@ -108,23 +116,27 @@ main {
 .form-group select:focus {
     border-color: #0056b3;
     outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .confirm-order {
-    padding: 15px 25px;
-    font-size: 18px;
+    padding: 14px 24px;
+    font-size: 17px;
     font-weight: bold;
     color: white;
-    background-color: #28a745;
+    background: rgba(40, 167, 69, 0.85);
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
 }
 
 .confirm-order:hover {
-    background-color: #218838;
+    background: rgba(33, 136, 56, 0.9);
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .footer {
@@ -135,4 +147,6 @@ main {
     position: relative;
     bottom: 0;
     width: 100%;
+    font-size: 14px;
+    letter-spacing: 0.5px;
 }

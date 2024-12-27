@@ -1,24 +1,28 @@
+/* General Body Styles */
 body {
-    padding: 0;
     margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9; /* Soft background color for the page */
 }
 
+/* Header Styling */
 header {
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
-    background: rgba(255, 255, 255, 0.8);
+    padding: 0 30px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly opaque white */
     color: #333;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 2px solid #f1f1f1;
+    border-bottom: 2px solid #eaeaea; /* Subtle line at the bottom */
 }
 
+/* Left Side (Logo and Title) */
 .header-left {
     display: flex;
     align-items: center;
@@ -26,32 +30,37 @@ header {
 }
 
 header .logo {
-    height: 60px;
     width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-image: url('../images/logo_transparent.png');
     background-size: cover;
     background-position: center;
     border: 2px solid #fff;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-header .titlee {
-    font-size: 50px;
-    font-weight: bold;
-    color: #787272;
-    transition: all 0.3s ease;
-    cursor: pointer;
-
-    line-height: 1.8;
-    font-family: 'Brush Script MT', cursive;
-}
-
-header .titlee:hover {
-    color: #91928d;
+header .logo:hover {
     transform: scale(1.1);
 }
 
+header .titlee {
+    font-size: 32px; /* Reduced font size for better balance */
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: 'Brush Script MT', cursive;
+    line-height: 1.5;
+}
+
+header .titlee:hover {
+    color: #007bff; /* Change color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Navigation Menu - Always Horizontal */
 header nav ul {
     list-style: none;
     display: flex;
@@ -60,19 +69,51 @@ header nav ul {
     padding: 0;
 }
 
+header nav ul li {
+    position: relative;
+}
+
 header nav ul li a {
     text-decoration: none;
     color: #333;
-    font-weight: 500;
-    padding: 12px 25px;
-    border-radius: 30px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 25px; /* More rounded buttons */
     font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
 }
 
+/* Hover Effects for Links */
 header nav ul li a:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-    color: #007bff;
-    transform: scale(1.05);
+    background-color: rgba(0, 123, 255, 0.1); /* Light blue hover effect */
+    color: #007bff; /* Change text color to blue */
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    header {
+        padding: 0 15px;
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .header-left {
+        margin-bottom: 15px;
+        gap: 10px;
+    }
+
+    /* Keep Navigation Links Horizontal Even on Small Screens */
+    header nav ul {
+        display: flex;
+        flex-direction: row; /* Horizontal layout on small screens */
+        gap: 15px;
+        align-items: center;
+    }
+
+    header nav ul li a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
