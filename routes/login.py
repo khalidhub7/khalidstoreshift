@@ -31,4 +31,4 @@ credentials! Please try again. 🔑")
 def logout():
     """ logout """
     session.pop("user_id", None)
-    return redirect(url_for("app_views.login"))
+    return redirect('/khalid_store_shift')

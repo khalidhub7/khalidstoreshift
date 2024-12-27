@@ -5,7 +5,6 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Container for header and cart icon */
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -101,7 +100,7 @@ body {
     margin: 10px 0;
 }
 
-/* Enhanced Add to Cart Button Styling */
+
 .add-to-cart {
     padding: 16px 30px;
     background: linear-gradient(145deg, #ff4e50, #ff6a71);
@@ -113,7 +112,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 20px;
-    margin-right: 20px; /* Margin right */
+    margin-right: 20px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     display: inline-block;
     width: 100%;
@@ -139,7 +138,6 @@ body {
     box-shadow: 0 0 0 2px #ff6a71;
 }
 
-/* Cart Icon Styling - Placed in the Header */
 .cart-icon-link {
     display: flex;
     align-items: center;
@@ -149,7 +147,7 @@ body {
     border-radius: 50%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-right: 20px; /* Margin right for spacing */
+    margin-right: 20px;
 }
 
 .cart-icon-link:hover {
