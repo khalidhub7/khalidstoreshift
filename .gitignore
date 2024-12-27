@@ -1,3 +1,4 @@
 data/db/
 __pycache__/
 routes/__pycache__/
+static/images/*.Identifier
