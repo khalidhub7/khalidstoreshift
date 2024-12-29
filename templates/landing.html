@@ -18,7 +18,7 @@
             <ul>
                 <li><a href="/khalid_store_shift">Home</a></li>
                 <li><a href="/khalid_store_shift/products">Shop</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#about-section">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
@@ -36,7 +36,7 @@
             </div>
         </div>
         
-        <section class="sub-hero">
+        <section class="sub-hero" id="about-section">
             <div class="sub-hero-content">
                 <h2 class="sub-hero-title">Why Choose khalidStoreshift?</h2>
                 <p class="sub-hero-text">We are committed to providing you with the best shopping experience, offering:</p>
@@ -54,45 +54,33 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img 
-                    src="{{ url_for('static', filename='images/logo_transparent.png') }}" 
+                <img id="footer-logo"
+                    src="../static/images/logo_transparent.png" 
                     alt="Logo">
                 <p>Your trusted e-commerce platform.</p>
             </div>
             <div class="footer-nav">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/products">Shop</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="/khalid_store_shift">Home</a></li>
+                    <li><a href="/khalid_store_shift/products">Shop</a></li>
+                    <li><a href="/khalid_store_shift/#about-section">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-social">
                 <h4>Follow Us</h4>
-                <a 
-                    href="https://facebook.com" 
-                    target="_blank" 
-                    aria-label="Facebook">
-                    <i class="fab fa-facebook"></i>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <img src="../static/images/logo/instagram.png" alt="Instagram" class="social-icon">
                 </a>
-                <a 
-                    href="https://twitter.com" 
-                    target="_blank" 
-                    aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <img src="../static/images/logo/linkedin.png" alt="LinkedIn" class="social-icon">
                 </a>
-                <a 
-                    href="https://instagram.com" 
-                    target="_blank" 
-                    aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
+                <a href="https://github.com" target="_blank" aria-label="GitHub">
+                    <img src="../static/images/logo/github.png" alt="GitHub" id="gitcolor" class="social-icon" >
                 </a>
-                <a 
-                    href="https://linkedin.com" 
-                    target="_blank" 
-                    aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <img src="../static/images/logo/twitter.png" alt="Twitter" class="social-icon">
                 </a>
             </div>
         </div>

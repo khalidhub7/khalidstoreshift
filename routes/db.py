@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """ db module """
-from flask import abort, redirect
+from flask import abort, redirect, make_response, render_template_string
 from flask import current_app as app
 import datetime
 import bcrypt
@@ -40,8 +40,10 @@ check if entered password validate user password """
 
 def addtocart(mongo, user_id, product):
     """cart handler add update ..."""
+    # abort(400, description="product out of stock! 📦")
     if product["stock"] <= 0:
-        abort(400, description="product out of stock! 📦")
+        response = "product out of stock! 📦"
+        return response
 
     cart = mongo.db.cart.find_one({"user_id": user_id})
     product_id = str(product["_id"])
@@ -72,7 +74,8 @@ def addtocart(mongo, user_id, product):
                 stock = oldquantity - (oldquantity + quantitytoadd)
 
                 if product["stock"] + stock < 0:
-                    abort(400, description="Not enough stock available! 📉")
+                    response = "Not enough stock available! 📉"
+                    return response
                 item["quantity"] += quantitytoadd
                 mongo.db.products.update_one(
                     {"_id": ObjectId(product_id)},
@@ -80,7 +83,8 @@ def addtocart(mongo, user_id, product):
                 break
         else:
             if product["stock"] < quantitytoadd:
-                abort(400, description="Not enough stock available! 📉")
+                response = "Not enough stock available! 📉"
+                return response
 
             cart["products"].append({
                 "product_id": product_id,

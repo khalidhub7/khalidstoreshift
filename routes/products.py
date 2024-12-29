@@ -4,6 +4,7 @@ from flask import render_template, session, redirect
 from . import app_views
 from flask import current_app as app
 
+
 @app_views.route("/products")
 def products():
     """ all products page """
@@ -15,7 +16,8 @@ def products():
     return render_template(
         "products.html", products=products)
 
-@app_views.route("/", methods=["GET"], 
+
+@app_views.route("/", methods=["GET"],
                  strict_slashes=False)
 def home():
     """ home page """

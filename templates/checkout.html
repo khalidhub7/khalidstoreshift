@@ -18,7 +18,7 @@
             <ul>
                 <li><a href="/khalid_store_shift">Home</a></li>
                 <li><a href="/khalid_store_shift/products">Shop</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="/khalid_store_shift/#about-section">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
@@ -57,46 +57,32 @@
                     Total Price: ${{ cart.total_price }}
                 </p>
             </section>
-
-            <!-- Checkout Form -->
-            <form 
-                class="checkout-form" 
-                action="/order/confirm" 
-                method="POST">
+            
+            <form class="checkout-form" action="/khalid_store_shift/order/confirm" method="POST">
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input 
-                        type="text" 
-                        id="name" 
-                        name="name" 
-                        placeholder="Enter your full name" 
-                        required>
+                    <input type="text" id="name" name="full_name" placeholder="Enter your full name" required>
                 </div>
                 <div class="form-group">
                     <label for="address">Address</label>
-                    <textarea 
-                        id="address" 
-                        name="address" 
-                        rows="3" 
-                        placeholder="Enter your address" 
-                        required></textarea>
+                    <textarea id="address" name="address" rows="3" placeholder="Enter your address" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="payment">Payment Method</label>
-                    <select 
-                        id="payment" 
-                        name="payment" 
-                        required>
+                    <select id="payment" name="payment" required>
                         <option value="" disabled selected>Select a payment method</option>
                         <option value="credit-card">Credit Card</option>
                         <option value="paypal">PayPal</option>
                         <option value="cash-on-delivery">Cash on Delivery</option>
                     </select>
                 </div>
-                <button 
-                    type="submit" 
-                    class="confirm-order">Confirm Order</button>
+                <button type="submit" class="confirm-order">Confirm Order</button>
             </form>
+
+            
+
+
+
         </section>
     </main>
 

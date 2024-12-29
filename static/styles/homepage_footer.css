@@ -77,3 +77,34 @@
     font-size: 14px;
     color: #aaa;
 }
+
+
+
+
+
+.footer-social a {
+    margin-right: 20px;
+}
+
+.footer-social .social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+    transform: scale(1.2);
+}
+
+.footer-social a:hover .social-icon {
+    filter: brightness(1.2); /* Optional: Adds a hover effect for icons */
+}
+
+
+#gitcolor {
+    background-color: white;
+}
+
+#footer-logo {
+    color: white;
+}

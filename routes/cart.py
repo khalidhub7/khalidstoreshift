@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """ cart module """
 from flask import (session, request, redirect,
-                   url_for, render_template, abort)
+                   url_for, render_template, abort,
+                   make_response, render_template_string)
 from . import app_views
 from flask import current_app as app
 from bson import ObjectId
@@ -11,7 +12,7 @@ from . import db
 
 @app_views.route("/cart/add", methods=["POST"],
                  strict_slashes=False)
-def add_to_cart():
+def addto_cart():
     """ add product to user's cart """
     mongo = app.config["MONGO"]
     user_id = session.get("user_id")
@@ -27,7 +28,25 @@ def add_to_cart():
         return redirect(url_for("app_views.products"))
     if not product:
         return redirect(url_for("app_views.products"))
-    db.addtocart(mongo, user_id, product)
+    try:
+        response = db.addtocart(mongo, user_id, product)
+        if response == "product out of stock! 📦":
+            return make_response(render_template_string("""
+            <script>
+                alert("product out of stock! 📦");
+                window.location.href = '/khalid_store_shift/products';
+            </script>
+            """), 400)
+        if response == "Not enough stock available! 📉":
+            return make_response(render_template_string("""
+            <script>
+                alert("Not enough stock available! 📉");
+                window.location.href = '/khalid_store_shift/products';
+            </script>
+            """), 400)
+    except Exception:
+        pass
+
     return redirect(url_for("app_views.products"))
 
 
@@ -94,8 +113,13 @@ def update_cart():
                 product = mongo.db.products.find_one(
                     {"_id": ObjectId(product_id)})
                 if product["stock"] + stock < 0:
-                    abort(400, description="Not enough \
-stock available.")
+                    product_stock = product["stock"]
+                    return make_response(render_template_string(f"""
+                    <script>
+                        alert("Not enough stock available. Only {product_stock} left");
+                        window.location.href = '/khalid_store_shift/cart';
+                    </script>
+                                                """), 400)
                 item["quantity"] = newquantity
                 mongo.db.products.update_one(
                     {"_id": ObjectId(product_id)},

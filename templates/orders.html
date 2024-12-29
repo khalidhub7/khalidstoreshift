@@ -12,17 +12,17 @@
     <header>
         <div class="header-left">
             <div class="logo"></div>
-            <div class="titlee">khalidStoreshift</div>
+            <div class="titlee">KhalidStoreShift</div>
         </div>
         <nav>
             <ul>
                 <li><a href="/khalid_store_shift">Home</a></li>
                 <li><a href="/khalid_store_shift/products">Shop</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="/khalid_store_shift/#about-section">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-    </header> 
+    </header>
 
     <main>
         <section class="order-history">
@@ -36,6 +36,10 @@
                             <p><strong>Date:</strong> {{ order.order_date }}</p>
                             <p><strong>Total:</strong> ${{ order.total_price }}</p>
                             <p><strong>Status:</strong> {{ order.status }}</p>
+                            <!-- New fields added here -->
+                            <p><strong>Full Name:</strong> {{ order.full_name }}</p>
+                            <p><strong>Address:</strong> {{ order.address }}</p>
+                            <p><strong>Payment Method:</strong> {{ order.payment_method }}</p>
                             <h3>Products:</h3>
                             <ul>
                                 {% for product in order.products %}
@@ -58,9 +62,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img 
-                    src="{{ url_for('static', filename='images/logo_transparent.png') }}" 
-                    alt="Logo">
+                <img src="{{ url_for('static', filename='images/logo_transparent.png') }}" alt="Logo">
                 <p>Your trusted e-commerce platform.</p>
             </div>
             <div class="footer-nav">
@@ -74,34 +76,14 @@
             </div>
             <div class="footer-social">
                 <h4>Follow Us</h4>
-                <a 
-                    href="https://facebook.com" 
-                    target="_blank" 
-                    aria-label="Facebook">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a 
-                    href="https://twitter.com" 
-                    target="_blank" 
-                    aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a 
-                    href="https://instagram.com" 
-                    target="_blank" 
-                    aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a 
-                    href="https://linkedin.com" 
-                    target="_blank" 
-                    aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 My E-Commerce Site. All rights reserved.</p>
+            <p>&copy; 2024 KhalidStoreShift. All rights reserved.</p>
         </div>
     </footer>
 </body>

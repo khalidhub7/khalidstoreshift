@@ -1,5 +1,6 @@
-from flask import (request, session, abort,
-                   render_template, redirect)
+from flask import (request, session, make_response,
+                   render_template, redirect,
+                   render_template_string)
 from . import app_views
 import bcrypt
 from . import db
@@ -15,8 +16,14 @@ def register():
 
         user = db.find_user_by_email(email)
         if user:
-            abort(400, description="📧 Email already \
-registered! Please log in to continue. 🔐")
+
+            return make_response(render_template_string("""
+        <script>
+            alert("📧 Email already \
+registered! Please log in to continue. 🔐");
+            window.location.href = '/khalid_store_shift/register';
+        </script>
+                                                    """), 400)
 
         password = bcrypt.hashpw(
             request.form["password"].encode("utf-8"),

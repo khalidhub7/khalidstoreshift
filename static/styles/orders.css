@@ -60,7 +60,7 @@ main {
 .order-item h2 {
     font-size: 22px;
     font-weight: bold;
-    color: #007bff;
+    color: red;
     margin: 0 0 15px;
     text-align: left;
 }
