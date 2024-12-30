@@ -4,3 +4,4 @@ routes/__pycache__/
 static/images/*.Identifier
 static/images/logo/*.Identifier
 static/images/horo/*.Identifier
+.env

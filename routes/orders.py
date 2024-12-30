@@ -5,15 +5,24 @@ from flask import (current_app as app, request, session,
                    render_template_string)
 from datetime import datetime
 from . import app_views
+from .auth import isadmin, require_auth
 
 
 @app_views.route("/orders", methods=["GET"],
                  strict_slashes=False)
+@require_auth
 def display_orders():
     """ return 'orders' list """
     mongo = app.config.get("MONGO")
-
     try:
+        if not isadmin():
+            return make_response(render_template_string("""
+            <script>
+                alert('You are not authorized to view this page.');
+                window.location.href = '/khalid_store_shift/checkout';
+            </script>
+                                                        """), 403)
+
         allorders = list(mongo.db.orders.find())
         if not allorders:
             return render_template("orders.html",

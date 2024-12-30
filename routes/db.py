@@ -3,8 +3,8 @@
 from flask import abort, redirect, make_response, render_template_string
 from flask import current_app as app
 import datetime
-import bcrypt
 from bson import ObjectId
+import os
 
 
 def find_user_by_email(email):
@@ -20,22 +20,19 @@ def find_user_by_email(email):
 def create_user(username, email, password):
     """ create a new user in db """
     mongo = app.config["MONGO"]
+    admins = os.getenv("admins", "").strip("[]").replace('"', '').split(",")
+    role = "admin" if email in admins else "user"
+
     if email is None:
         return None
     new_user = mongo.db.users.insert_one({
         "username": username,
         "email": email,
         "password": password,
+        "role": role,
         "created_at": datetime.datetime.utcnow()
     })
     return new_user
-
-
-def isvalid_paswd(currentpswd, storedpswd):
-    """
-check if entered password validate user password """
-    return bcrypt.checkpw(
-        currentpswd.encode("utf-8"), storedpswd)
 
 
 def addtocart(mongo, user_id, product):

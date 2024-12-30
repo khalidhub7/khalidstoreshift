@@ -3,6 +3,7 @@
 from flask import (request, session, redirect,
                    url_for, make_response, render_template,
                    render_template_string)
+from .auth import isauthenticated, checkpswd
 from . import app_views
 from . import db
 
@@ -11,12 +12,15 @@ from . import db
                  strict_slashes=False)
 def login():
     """ login """
+    if isauthenticated():
+        return redirect(url_for("app_views.products"))
+
     if request.method == "POST":
         email = request.form["email"]
         password = request.form["password"]
 
         user = db.find_user_by_email(email)
-        if user and db.isvalid_paswd(
+        if user and checkpswd(
                 password, user['password']):
             session["user_id"] = str(user["_id"])
             return redirect(url_for("app_views.products"))
@@ -37,10 +41,8 @@ def logout():
     """ logout """
     session.pop("user_id", None)
     return make_response(render_template_string("""
-        <script>
+        <script type="text/javascript">
             alert("You have logged out successfully! 👍👋");
-            setTimeout(function() {
-                window.location.href = '/khalid_store_shift';
-            }, 1000);
+            window.location.href = '/khalid_store_shift';
         </script>
-                                                    """), 200)
+    """), 200)

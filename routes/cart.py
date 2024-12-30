@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ cart module """
 from flask import (session, request, redirect,
-                   url_for, render_template, abort,
+                   url_for, render_template,
                    make_response, render_template_string)
 from . import app_views
 from flask import current_app as app
