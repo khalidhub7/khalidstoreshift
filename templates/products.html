@@ -13,12 +13,7 @@
         <div class="header-left">
             <div class="logo"></div>
             <div class="search">
-                <input 
-                    type="text" 
-                    id="search-bar" 
-                    class="input-bar" 
-                    placeholder="Search here..."
-                >
+                <input type="text" id="search-bar" class="input-bar" placeholder="Search here...">
                 <button class="search-but">Search</button>
             </div>
         </div>
@@ -35,20 +30,15 @@
     <main>
         <div class="header-container">
             <h1 class="product-header">Our Products</h1>
-
             <a href="/khalid_store_shift/cart" class="cart-icon-link">
                 <img src="{{ url_for('static', filename='images/shopping-cart.png') }}" alt="Cart" class="cart-icon">
             </a>
         </div>
-    
         <div class="product-grid">
             {% for product in products %}
                 <div class="product">
                     <div class="product-image-container">
-                        <img 
-                            src="{{ url_for('static', filename=product.image_url) }}" 
-                            alt="{{ product.name }}"
-                        >
+                        <img src="{{ url_for('static', filename=product.image_url) }}" alt="{{ product.name }}">
                     </div>
                     <div class="product-details">
                         <h2>{{ product.name }}</h2>
@@ -64,51 +54,34 @@
         </div>
     </main>
     
-    
-    
-    
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img 
-                    src="{{ url_for('static', filename='images/logo_transparent.png') }}" 
-                    alt="Logo">
+                <img id="footer-logo" src="../static/images/logo_transparent.png" alt="Logo">
                 <p>Your trusted e-commerce platform.</p>
             </div>
             <div class="footer-nav">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/products">Shop</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="/khalid_store_shift">Home</a></li>
+                    <li><a href="/khalid_store_shift/products">Shop</a></li>
+                    <li><a href="/khalid_store_shift/#about-section">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-social">
-                <h4>Follow Us</h4>
-                <a 
-                    href="https://facebook.com" 
-                    target="_blank" 
-                    aria-label="Facebook">
-                    <i class="fab fa-facebook"></i>
+                <h4 id="ab">Follow Us</h4>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <img src="../static/images/logo/instagram.png" alt="Instagram" class="social-icon">
                 </a>
-                <a 
-                    href="https://twitter.com" 
-                    target="_blank" 
-                    aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <img src="../static/images/logo/linkedin.png" alt="LinkedIn" class="social-icon">
                 </a>
-                <a 
-                    href="https://instagram.com" 
-                    target="_blank" 
-                    aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
+                <a href="https://github.com" target="_blank" aria-label="GitHub">
+                    <img id="gitcolor" src="../static/images/logo/github.png" alt="GitHub" class="social-icon">
                 </a>
-                <a 
-                    href="https://linkedin.com" 
-                    target="_blank" 
-                    aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <img src="../static/images/logo/twitter.png" alt="Twitter" class="social-icon">
                 </a>
             </div>
         </div>

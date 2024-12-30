@@ -22,7 +22,6 @@ main {
     color: #333;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     padding-bottom: 10px;
-    border-bottom: none;
 }
 
 .order-summary {
@@ -67,10 +66,6 @@ main {
     background-color: #f7f9fc;
 }
 
-.order-summary-table tr:last-child td {
-    border-bottom: none;
-}
-
 .checkout-form {
     display: flex;
     flex-direction: column;
@@ -87,7 +82,7 @@ main {
     font-size: 15px;
     font-weight: bold;
     color: black;
-    font-family: monospace;   
+    font-family: monospace;
 }
 
 .form-group input,
@@ -121,12 +116,10 @@ main {
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(8px);
-
     width: 30%;
 }
 
 .confirm-order:hover {
-    background: linear-gradient(90deg, #ff6f00, #ff9800);
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }

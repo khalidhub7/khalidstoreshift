@@ -36,7 +36,6 @@
                             <p><strong>Date:</strong> {{ order.order_date }}</p>
                             <p><strong>Total:</strong> ${{ order.total_price }}</p>
                             <p><strong>Status:</strong> {{ order.status }}</p>
-                            <!-- New fields added here -->
                             <p><strong>Full Name:</strong> {{ order.full_name }}</p>
                             <p><strong>Address:</strong> {{ order.address }}</p>
                             <p><strong>Payment Method:</strong> {{ order.payment_method }}</p>
@@ -62,28 +61,36 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="{{ url_for('static', filename='images/logo_transparent.png') }}" alt="Logo">
+                <img id="footer-logo" src="../static/images/logo_transparent.png" alt="Logo">
                 <p>Your trusted e-commerce platform.</p>
             </div>
             <div class="footer-nav">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/products">Shop</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="/khalid_store_shift">Home</a></li>
+                    <li><a href="/khalid_store_shift/products">Shop</a></li>
+                    <li><a href="/khalid_store_shift/#about-section">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-social">
-                <h4>Follow Us</h4>
-                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <h4 id="ab">Follow Us</h4>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <img src="../static/images/logo/instagram.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <img src="../static/images/logo/linkedin.png" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://github.com" target="_blank" aria-label="GitHub">
+                    <img id="gitcolor" src="../static/images/logo/github.png" alt="GitHub" class="social-icon">
+                </a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <img src="../static/images/logo/twitter.png" alt="Twitter" class="social-icon">
+                </a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 KhalidStoreShift. All rights reserved.</p>
+            <p>&copy; 2024 My E-Commerce Site. All rights reserved.</p>
         </div>
     </footer>
 </body>

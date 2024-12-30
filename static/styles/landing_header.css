@@ -1,28 +1,25 @@
-/* General Body Styles */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9; /* Soft background color for the page */
+    background-color: #f9f9f9;
 }
 
-/* Header Styling */
 header {
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
-    background: rgba(255, 255, 255, 0.9); /* Slightly opaque white */
+    background: rgba(255, 255, 255, 0.9);
     color: #333;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 2px solid #eaeaea; /* Subtle line at the bottom */
+    border-bottom: 2px solid #eaeaea;
 }
 
-/* Left Side (Logo and Title) */
 .header-left {
     display: flex;
     align-items: center;
@@ -46,7 +43,7 @@ header .logo:hover {
 }
 
 header .titlee {
-    font-size: 32px; /* Reduced font size for better balance */
+    font-size: 32px;
     font-weight: bold;
     color: #333;
     transition: all 0.3s ease;
@@ -56,11 +53,10 @@ header .titlee {
 }
 
 header .titlee:hover {
-    color: #007bff; /* Change color on hover */
-    transform: scale(1.1); /* Slight zoom effect */
+    color: #007bff;
+    transform: scale(1.1);
 }
 
-/* Navigation Menu - Always Horizontal */
 header nav ul {
     list-style: none;
     display: flex;
@@ -78,19 +74,17 @@ header nav ul li a {
     color: #333;
     font-weight: 600;
     padding: 12px 20px;
-    border-radius: 25px; /* More rounded buttons */
+    border-radius: 25px;
     font-size: 16px;
     transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
 }
 
-/* Hover Effects for Links */
 header nav ul li a:hover {
-    background-color: rgba(0, 123, 255, 0.1); /* Light blue hover effect */
-    color: #007bff; /* Change text color to blue */
-    transform: scale(1.05); /* Slight zoom effect */
+    background-color: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+    transform: scale(1.05);
 }
 
-/* Responsive Design for Small Screens */
 @media (max-width: 768px) {
     header {
         padding: 0 15px;
@@ -104,10 +98,9 @@ header nav ul li a:hover {
         gap: 10px;
     }
 
-    /* Keep Navigation Links Horizontal Even on Small Screens */
     header nav ul {
         display: flex;
-        flex-direction: row; /* Horizontal layout on small screens */
+        flex-direction: row;
         gap: 15px;
         align-items: center;
     }

@@ -4,12 +4,8 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
+    background: #f9f9f9 url('../images/horo/3.jpg') center / cover no-repeat;
     color: #333;
-    background-image: url('../images/horo/3.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 main {

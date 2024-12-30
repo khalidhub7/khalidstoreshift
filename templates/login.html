@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../static/styles/landing_header.css">
     <link rel="stylesheet" href="../static/styles/homepage_footer.css">
     <link rel="stylesheet" href="../static/styles/login.css">
@@ -31,71 +31,44 @@
                 <form id="login-form" action="/khalid_store_shift/login" method="POST">
                     <h2>Login</h2>
                     <label for="login-email">Email:</label>
-                    <input 
-                        type="email" 
-                        id="login-email" 
-                        name="email" 
-                        placeholder="Enter your email" 
-                        required>
+                    <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
                     <label for="login-password">Password:</label>
-                    <input 
-                        type="password" 
-                        id="login-password" 
-                        name="password" 
-                        placeholder="Enter your password" 
-                        required>
-                    <button 
-                        type="submit" 
-                        class="submit-button">Login</button>
+                    <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+                    <button type="submit" class="submit-button">Login</button>
                 </form>
                 <p>Don't have an account? <a href="/khalid_store_shift/register">Register here</a></p>
             </div>
         </section>
     </main>
-    
 
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img 
-                    src="{{ url_for('static', filename='images/logo_transparent.png') }}" 
-                    alt="Logo">
+                <img id="footer-logo" src="../static/images/logo_transparent.png" alt="Logo">
                 <p>Your trusted e-commerce platform.</p>
             </div>
             <div class="footer-nav">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/products">Shop</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="/khalid_store_shift">Home</a></li>
+                    <li><a href="/khalid_store_shift/products">Shop</a></li>
+                    <li><a href="/khalid_store_shift/#about-section">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-social">
-                <h4>Follow Us</h4>
-                <a 
-                    href="https://facebook.com" 
-                    target="_blank" 
-                    aria-label="Facebook">
-                    <i class="fab fa-facebook"></i>
+                <h4 id="ab">Follow Us</h4>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <img src="../static/images/logo/instagram.png" alt="Instagram" class="social-icon">
                 </a>
-                <a 
-                    href="https://twitter.com" 
-                    target="_blank" 
-                    aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <img src="../static/images/logo/linkedin.png" alt="LinkedIn" class="social-icon">
                 </a>
-                <a 
-                    href="https://instagram.com" 
-                    target="_blank" 
-                    aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
+                <a href="https://github.com" target="_blank" aria-label="GitHub">
+                    <img id="gitcolor" src="../static/images/logo/github.png" alt="GitHub" class="social-icon">
                 </a>
-                <a 
-                    href="https://linkedin.com" 
-                    target="_blank" 
-                    aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <img src="../static/images/logo/twitter.png" alt="Twitter" class="social-icon">
                 </a>
             </div>
         </div>
@@ -105,4 +78,3 @@
     </footer>
 </body>
 </html>
-

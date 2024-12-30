@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>register</title>
+    <title>Register</title>
     <link rel="stylesheet" href="../static/styles/landing_header.css">
     <link rel="stylesheet" href="../static/styles/homepage_footer.css">
     <link rel="stylesheet" href="../static/styles/register.css">
@@ -31,68 +31,46 @@
                 <form id="register-form" action="/khalid_store_shift/register" method="POST">
                     <h2>Register</h2>
                     <label for="register-name">Name:</label>
-                    <input 
-                        type="text" 
-                        id="register-name" 
-                        name="username" 
-                        placeholder="Enter your name" 
-                        required
-                    >
+                    <input type="text" id="register-name" name="username" placeholder="Enter your name" required>
                     <label for="register-email">Email:</label>
-                    <input 
-                        type="email" 
-                        id="register-email" 
-                        name="email" 
-                        placeholder="Enter your email" 
-                        required
-                    >
+                    <input type="email" id="register-email" name="email" placeholder="Enter your email" required>
                     <label for="register-password">Password:</label>
-                    <input 
-                        type="password" 
-                        id="register-password" 
-                        name="password" 
-                        placeholder="Create a password" 
-                        required
-                    >
+                    <input type="password" id="register-password" name="password" placeholder="Create a password" required>
                     <button type="submit" class="submit-button">Register</button>
                 </form>
                 <p>Already registered? <a href="/khalid_store_shift/login">Login here</a></p>
             </div>
         </section>
     </main>
-    
 
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img 
-                    src="{{ url_for('static', filename='images/logo_transparent.png') }}" 
-                    alt="Logo"
-                >
+                <img id="footer-logo" src="../static/images/logo_transparent.png" alt="Logo">
                 <p>Your trusted e-commerce platform.</p>
             </div>
             <div class="footer-nav">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/products">Shop</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="/khalid_store_shift">Home</a></li>
+                    <li><a href="/khalid_store_shift/products">Shop</a></li>
+                    <li><a href="/khalid_store_shift/#about-section">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-social">
-                <h4>Follow Us</h4>
-                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
+                <h4 id="ab">Follow Us</h4>
                 <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
+                    <img src="../static/images/logo/instagram.png" alt="Instagram" class="social-icon">
                 </a>
                 <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
+                    <img src="../static/images/logo/linkedin.png" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://github.com" target="_blank" aria-label="GitHub">
+                    <img id="gitcolor" src="../static/images/logo/github.png" alt="GitHub" class="social-icon">
+                </a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <img src="../static/images/logo/twitter.png" alt="Twitter" class="social-icon">
                 </a>
             </div>
         </div>

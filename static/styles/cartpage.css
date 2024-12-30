@@ -2,7 +2,6 @@
     padding: 40px 50px;
     max-width: 1200px;
     margin: 30px auto;
-
     border-radius: 5px;
     font-family: monospace;
 }
@@ -12,13 +11,9 @@
     font-weight: 700;
     text-align: center;
     margin-bottom: 40px;
-    background: linear-gradient(
-        90deg, #6c63ff, #3b3bb5);
-
-    /* text effect */
+    background: linear-gradient(90deg, #6c63ff, #3b3bb5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     letter-spacing: 1.5px;
     text-transform: lowercase;
@@ -29,8 +24,6 @@
     margin-bottom: 40px;
     font-size: 16px;
     border-collapse: collapse;
-    overflow: hidden;
-    border-radius: 1px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -56,18 +49,6 @@
 .cart-table tr:nth-child(even) td {
     background: #ececec;
 }
-
-/* .cart-table td:first-child, 
-.cart-table th:first-child {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-.cart-table td:last-child, 
-.cart-table th:last-child {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-} */
 
 .quantity-input {
     width: 60px;
