@@ -1,5 +1,5 @@
 # Khalid Store Shift
-A simple e-commerce platform built using Flask, MongoDB, and Python. This project includes user authentication, cart management, product display, and order handling functionality. It allows users to register, log in, add products to their cart, and place orders.
+A simple e-commerce platform built using Flask, MongoDB, and Python. This project includes user authentication, cart management, product display, and order handling functionality.
 
 ## Features
 - **User Authentication**: Users can register, log in, and log out. Passwords are hashed and validated.
@@ -96,11 +96,10 @@ Example .env file:
 ```ini
 MONGO_URI=mongodb://localhost:27017/khalidstoreshift
 admins="admin@example.com,superadmin@example.com"
-
+```
 
 ## Contributing
 If you would like to contribute to the project, feel free to fork the repository, make changes, and submit a pull request. Please ensure your code follows the existing style and includes appropriate tests.
 
 ## License
-
 soon ...
